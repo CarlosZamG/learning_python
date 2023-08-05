@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "posts/hola-mundo/index.html",
+    "href": "posts/hola-mundo/index.html",
+    "title": "Hola Mundo",
+    "section": "",
+    "text": "Hola Mundo!!!\nDecidí empezar este blog para documentar mi aprendizaje en Python.\nLos temas que planeo aprender (por ahora) son los siguientes:\n\n1. Interpretado vs Compilado.\n\n\n2. Funciones.\n\nScope.\nParámetros y argumentos.\nArgumentos opcionales y parámetros con un valor por default.\nargs y kwargs.\nFunciones lambda.\nmap(),filter(), reduce().\n\n\n\n3. Estructuras de datos y strings.\n\nListas.\nIndexing y slicing.\nTuplas.\nDiccionarios\nArrays.\nFormateo de strings.\nComprenhensions.\n\n\n\n4. Programación Orientada a Objetos.\n\nClases.\nHerencia.\nSobrecarga de operadores.\nEnum.\n\n\n\n4. Otros:\n\nManejo de archivos.\nExcepciones.\nassert.\nDecoradores."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Aprendiendo Python",
+    "section": "",
+    "text": "Hola Mundo\n\n\n\n\n\n\n\n\n\n\n\n\nAug 5, 2023\n\n\nCarlos Zamora\n\n\n\n\n\n\nNo hay resultados"
+  }
+]

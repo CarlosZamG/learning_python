@@ -1,0 +1,23 @@
+project:
+  type: website
+
+
+language: _language-es.yml
+
+
+website:
+  title: "Aprendiendo Python"
+  navbar:
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/
+      - icon: twitter
+        href: https://twitter.com
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+
+
+

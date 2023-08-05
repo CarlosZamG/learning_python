@@ -1,0 +1,47 @@
+---
+title: "Hola Mundo"
+author: "Carlos Zamora"
+date: "2023-08-05"
+---
+
+
+Hola Mundo!!! 
+
+Decidí empezar este blog para documentar mi aprendizaje en Python. 
+
+Los temas que planeo aprender (por ahora) son los siguientes:
+
+### 1. Interpretado vs Compilado.
+
+### 2. Funciones.
+
+- Scope.
+- Parámetros y argumentos.
+- Argumentos opcionales y parámetros con un valor por default.
+- args y kwargs.
+- Funciones lambda.
+- `map()`,`filter()`, `reduce()`.
+
+### 3. Estructuras de datos y strings.
+
+- Listas.
+- Indexing y slicing.
+- Tuplas.
+- Diccionarios
+- Arrays.
+- Formateo de strings.
+- Comprenhensions.
+
+### 4. Programación Orientada a Objetos.
+
+- Clases. 
+- Herencia.
+- Sobrecarga de operadores.
+- Enum.
+
+### 4. Otros:
+
+- Manejo de archivos.
+- Excepciones.
+- `assert`.
+- Decoradores.
