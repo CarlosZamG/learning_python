@@ -1,0 +1,28 @@
+---
+title: "Ejemplo: Nuestra propia clase Fraction"
+author: "Carlos Zamora"
+date: "2023-08-06"
+categories:
+    - POO
+---
+
+En este blog documentaré la creación de mi propia clase para representar un número racional.
+
+Empezaremos con una clase `MyFraction` sencilla que tiene el constructor más evidente que recibe dos números enteros que representan el numerador y el denominador. También he agregado el método `__str__()` para poder mostrar nuestras instancias de manera legible con `print()`. 
+
+```python
+class MyFraction:
+    
+    def __init__(self, numerator:int, denominator:int = 1) -> None:
+        self.numerator = numerator
+        self.denominator = denominator
+
+    def __str__(self) -> str:
+        return f"{self.numerator}/{self.denominator}"
+    
+
+if __name__ == "__main__":
+    
+    q1 = MyFraction(5,3)
+    print(q1)
+```

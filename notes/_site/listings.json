@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/fracciones/index.html",
       "/posts/hola-mundo/index.html"
     ]
   }

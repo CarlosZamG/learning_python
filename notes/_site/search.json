@@ -4,7 +4,14 @@
     "href": "posts/hola-mundo/index.html",
     "title": "Hola Mundo",
     "section": "",
-    "text": "Hola Mundo!!!\nDecidí empezar este blog para documentar mi aprendizaje en Python.\nLos temas que planeo aprender (por ahora) son los siguientes:\n\n1. Interpretado vs Compilado.\n\n\n2. Funciones.\n\nScope.\nParámetros y argumentos.\nArgumentos opcionales y parámetros con un valor por default.\nargs y kwargs.\nFunciones lambda.\nmap(),filter(), reduce().\n\n\n\n3. Estructuras de datos y strings.\n\nListas.\nIndexing y slicing.\nTuplas.\nDiccionarios\nArrays.\nFormateo de strings.\nComprenhensions.\n\n\n\n4. Programación Orientada a Objetos.\n\nClases.\nHerencia.\nSobrecarga de operadores.\nEnum.\n\n\n\n4. Otros:\n\nManejo de archivos.\nExcepciones.\nassert.\nDecoradores."
+    "text": "Hola Mundo!!!!\nDecidí empezar este blog para documentar mi aprendizaje en Python.\nLos temas que planeo aprender (por ahora) son los siguientes:\n\n1. Interpretado vs Compilado.\n\n\n2. Funciones.\n\nScope.\nParámetros y argumentos.\nArgumentos opcionales y parámetros con un valor por default.\nargs y kwargs.\nFunciones lambda.\nmap(),filter(), reduce().\n\n\n\n3. Estructuras de datos y strings.\n\nListas.\nIndexing y slicing.\nTuplas.\nDiccionarios\nArrays.\nFormateo de strings.\nComprenhensions.\n\n\n\n4. Programación Orientada a Objetos.\n\nClases.\nHerencia.\nSobrecarga de operadores.\nEnum.\n\n\n\n4. Otros:\n\nManejo de archivos.\nExcepciones.\nassert.\nDecoradores."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Aprendiendo Python",
+    "section": "",
+    "text": "Ejemplo: Nuestra propia clase Fraction\n\n\n\n\n\n\n\nPOO\n\n\n\n\n\n\n\n\n\n\n\nAug 6, 2023\n\n\nCarlos Zamora\n\n\n\n\n\n\n  \n\n\n\n\nHola Mundo\n\n\n\n\n\n\n\n\n\n\n\n\nAug 5, 2023\n\n\nCarlos Zamora\n\n\n\n\n\n\nNo hay resultados"
   },
   {
     "objectID": "about.html",
@@ -14,10 +21,10 @@
     "text": "About this blog"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Aprendiendo Python",
+    "objectID": "posts/fracciones/index.html",
+    "href": "posts/fracciones/index.html",
+    "title": "Ejemplo: Nuestra propia clase Fraction",
     "section": "",
-    "text": "Hola Mundo\n\n\n\n\n\n\n\n\n\n\n\n\nAug 5, 2023\n\n\nCarlos Zamora\n\n\n\n\n\n\nNo hay resultados"
+    "text": "En este blog documentaré la creación de mi propia clase para representar un número racional.\nEmpezaremos con una clase MyFraction sencilla que tiene el constructor más evidente que recibe dos números enteros que representan el numerador y el denominador. También he agregado el método __str__() para poder mostrar nuestras instancias de manera legible con print().\nclass MyFraction:\n    \n    def __init__(self, numerator:int, denominator:int = 1) -&gt; None:\n        self.numerator = numerator\n        self.denominator = denominator\n\n    def __str__(self) -&gt; str:\n        return f\"{self.numerator}/{self.denominator}\"\n    \n\nif __name__ == \"__main__\":\n    \n    q1 = MyFraction(5,3)\n    print(q1)"
   }
 ]
