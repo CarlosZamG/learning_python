@@ -216,7 +216,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Salida:</p>
 <pre><code>hola/3
 3.14/2.72</code></pre>
-<p>Podemos ver en la salida que nuestra instancia ya no representa un racional propiamente.</p>
+<p>Podemos ver en la salida que nuestra instancia ya no representa un racional propiamente, esto se debe a que Python es un lenguaje de tipado dinámico que no revisa los tipos de datos. Podemos pensar que la solución a este problema implementar la revisión de tipos nosotros mismos.</p>
+<p>Antes de continuar, delimitemos nuestra clase, específicamente nuestro constructor:</p>
+<ol type="1">
+<li>Recibirá 1 o 2 variables que representen enteros, ó</li>
+<li>Recibirá 1 variable que represente un flotante, ó</li>
+<li>Recibirá otra fracción.</li>
+</ol>
 
 
 

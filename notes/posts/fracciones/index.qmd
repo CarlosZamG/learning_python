@@ -53,4 +53,10 @@ hola/3
 3.14/2.72
 ```
 
-Podemos ver en la salida que nuestra instancia ya no representa un racional propiamente.
+Podemos ver en la salida que nuestra instancia ya no representa un racional propiamente, esto se debe a que Python es un lenguaje de tipado dinámico que no revisa los tipos de datos. Podemos pensar que la solución a este problema implementar la revisión de tipos nosotros mismos. 
+
+Antes de continuar, delimitemos nuestra clase, específicamente nuestro constructor:
+
+1. Recibirá 1 o 2 variables que representen enteros, ó
+2. Recibirá 1 variable que represente un flotante, ó
+3. Recibirá otra fracción.
