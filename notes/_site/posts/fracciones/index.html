@@ -206,6 +206,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Salida:</p>
 <pre><code>5/3
 8/1</code></pre>
+<p>Vemos que este código funciona bien cuando recibimos 1 o 2 enteros, sin embargo, puede no tener el efecto deseado al recibir valores de otro tipo:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    q1 <span class="op">=</span> MyFraction(<span class="st">"hola"</span>,<span class="dv">3</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    q2 <span class="op">=</span> MyFraction(<span class="fl">3.14</span>, <span class="fl">2.72</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(q1)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(q2)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Salida:</p>
+<pre><code>hola/3
+3.14/2.72</code></pre>
+<p>Podemos ver en la salida que nuestra instancia ya no representa un racional propiamente.</p>
 
 
 

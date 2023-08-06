@@ -35,3 +35,22 @@ Salida:
 5/3
 8/1
 ```
+
+Vemos que este código funciona bien cuando recibimos 1 o  2 enteros, sin embargo, puede no tener el efecto deseado al recibir valores de otro tipo:
+
+```python
+if __name__ == "__main__":
+    
+    q1 = MyFraction("hola",3)
+    q2 = MyFraction(3.14, 2.72)
+    print(q1)
+    print(q2)
+```
+
+Salida:
+```
+hola/3
+3.14/2.72
+```
+
+Podemos ver en la salida que nuestra instancia ya no representa un racional propiamente.
