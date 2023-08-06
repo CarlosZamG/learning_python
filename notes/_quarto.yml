@@ -16,7 +16,8 @@ website:
         href: https://twitter.com
 format:
   html:
-    theme: cosmo
+    highlight-style: atom-one
+    theme: zephyr
     css: styles.css
 
 
