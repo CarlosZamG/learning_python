@@ -11,4 +11,6 @@ class MyFraction:
 if __name__ == "__main__":
     
     q1 = MyFraction(5,3)
+    q2 = MyFraction(8)
     print(q1)
+    print(q2)
