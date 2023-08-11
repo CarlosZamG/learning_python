@@ -22,6 +22,9 @@ class MyFraction:
             self.numerator = intarg
             self.denominator = arg2
             self.simplify()
+        elif isinstance(arg1, MyFraction) and arg2 == 1:
+            self.numerator = arg1.numerator 
+            self.denominator = arg1.denominator
 
         
 
@@ -58,5 +61,7 @@ class MyFraction:
 
 if __name__ == "__main__":
     
-    q2 = MyFraction(3.14159)
+    q1 = MyFraction(12,8)
+    q2 = MyFraction(q1)
+    print(q1)
     print(q2)
