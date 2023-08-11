@@ -63,7 +63,17 @@ class MyFraction:
 
 if __name__ == "__main__":
     
-    q1 = MyFraction(0.33,8)
-    q2 = MyFraction(q1)
+    q1 = MyFraction(12,8)
     print(q1)
+
+    q2 = MyFraction(32,-8)
     print(q2)
+
+    q3 = MyFraction(3.14)
+    print(q3)
+
+    q4 = MyFraction(q1)
+    print(q4)
+
+    q5 = MyFraction("Hola",3)
+    print(q5)    

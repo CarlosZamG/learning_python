@@ -60,3 +60,105 @@ Antes de continuar, delimitemos nuestra clase, específicamente nuestro construc
 1. Recibirá 1 o 2 variables que representen enteros, ó
 2. Recibirá 1 variable que represente un flotante, ó
 3. Recibirá otra fracción.
+
+Este es el código modificado:
+```python
+class MyFraction:
+    
+    def __init__(self, arg1, arg2 = 1) -> None:
+        
+        if isinstance(arg1, int) and isinstance(arg2, int):
+            if arg2 == 0:
+                raise ZeroDivisionError("the denominator should be non-zero") 
+            elif arg1 == 0:
+                self.numerator = arg1
+                self.denominator = 1
+            else:
+                self.numerator = arg1
+                self.denominator = arg2
+                self.simplify()
+        elif isinstance(arg1, float) and arg2 == 1:
+            intarg = int(arg1)
+            while arg1 - intarg > 0.00001:
+                arg1 *= 10
+                arg2 *= 10
+                intarg = int(arg1)
+
+            self.numerator = intarg
+            self.denominator = arg2
+            self.simplify()
+        elif isinstance(arg1, MyFraction) and arg2 == 1:
+            self.numerator = arg1.numerator 
+            self.denominator = arg1.denominator
+        else:
+            raise TypeError("unsupported types of arguments")
+
+        
+
+    def simplify(self):
+        
+        abs_n = abs(self.numerator)
+        abs_d = abs(self.denominator)
+        d = self.gcd(abs_n,abs_d)
+        self.numerator //= d
+        self.denominator //= d
+
+        if self.denominator < 0:
+            self.numerator *= -1
+            self.denominator *= -1
+
+    def __str__(self) -> str:
+        return f"{self.numerator}/{self.denominator}"
+    
+    @staticmethod
+    def gcd(a:int, b:int) -> int:
+        
+        if a<b:
+            a,b = b,a
+        
+        r = a % b
+        while r != 0:
+            
+            a = b
+            b = r
+            r = a % b
+
+        return b
+    
+
+if __name__ == "__main__":
+    
+    q1 = MyFraction(12,8)
+    print(q1)
+
+    q2 = MyFraction(32,-8)
+    print(q2)
+
+    q3 = MyFraction(3.14)
+    print(q3)
+
+    q4 = MyFraction(q1)
+    print(q4)
+
+    q5 = MyFraction("Hola",3)
+    print(q5)    
+```
+
+Salida:
+
+```
+3/2
+-4/1
+157/50
+3/2
+Traceback (most recent call last):
+  File ".\notes\posts\fracciones\ownfraction.py", line 78, in <module>
+    q5 = MyFraction("Hola",3)
+  File ".\notes\posts\fracciones\ownfraction.py", line 29, in __init__
+    raise TypeError("unsupported types of arguments")
+TypeError: unsupported types of arguments
+```
+
+Vemos que nuestro código parece funcionar, sin embargo [PEP 443](https://peps.python.org/pep-0443/#abstract) dice que *"actualmente es un antipatrón común para el código de Python inspeccionar los tipos de argumentos recibidos para decidir qué hacer con los objetos."* 😱😱😱
+
+Así que esta no parece ser una forma pythónica de hacerlo.
