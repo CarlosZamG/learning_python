@@ -25,6 +25,8 @@ class MyFraction:
         elif isinstance(arg1, MyFraction) and arg2 == 1:
             self.numerator = arg1.numerator 
             self.denominator = arg1.denominator
+        else:
+            raise TypeError("unsupported types of arguments")
 
         
 
@@ -61,7 +63,7 @@ class MyFraction:
 
 if __name__ == "__main__":
     
-    q1 = MyFraction(12,8)
+    q1 = MyFraction(0.33,8)
     q2 = MyFraction(q1)
     print(q1)
     print(q2)
