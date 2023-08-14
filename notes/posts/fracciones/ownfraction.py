@@ -1,33 +1,43 @@
 class MyFraction:
     
-    def __init__(self, arg1, arg2 = 1) -> None:
+    def __init__(self, p:int, q:int = 1) -> None:
         
-        if isinstance(arg1, int) and isinstance(arg2, int):
-            if arg2 == 0:
+        if isinstance(p, int) and isinstance(q, int):
+            if q == 0:
                 raise ZeroDivisionError("the denominator should be non-zero") 
-            elif arg1 == 0:
-                self.numerator = arg1
+            elif p == 0:
+                self.numerator = p
                 self.denominator = 1
             else:
-                self.numerator = arg1
-                self.denominator = arg2
+                self.numerator = p
+                self.denominator = q
                 self.simplify()
-        elif isinstance(arg1, float) and arg2 == 1:
-            intarg = int(arg1)
-            while arg1 - intarg > 0.00001:
-                arg1 *= 10
-                arg2 *= 10
-                intarg = int(arg1)
-
-            self.numerator = intarg
-            self.denominator = arg2
-            self.simplify()
-        elif isinstance(arg1, MyFraction) and arg2 == 1:
-            self.numerator = arg1.numerator 
-            self.denominator = arg1.denominator
         else:
-            raise TypeError("unsupported types of arguments")
+            raise TypeError("arguments should be of integer type")
+    
+    @classmethod
+    def from_float(cls, f:float):
 
+        if isinstance(f, float):
+            denominator = 1 
+            intarg = int(f)
+            while f - intarg > 0.00001:
+                f *= 10
+                denominator *= 10
+                intarg = int(f)
+
+            return cls(intarg, denominator) 
+        
+        else:
+            raise TypeError("argument should be of float type")
+
+    @classmethod
+    def from_fraction(cls, fraction):
+
+        if isinstance(fraction, MyFraction):
+            return cls(fraction.numerator, fraction.denominator)
+        else:
+            raise TypeError("argument should be an instance of MyFraction")
         
 
     def simplify(self):
@@ -69,11 +79,11 @@ if __name__ == "__main__":
     q2 = MyFraction(32,-8)
     print(q2)
 
-    q3 = MyFraction(3.14)
+    q3 = MyFraction.from_float(3.14)
     print(q3)
 
-    q4 = MyFraction(q1)
+    q4 = MyFraction.from_fraction(q2)
     print(q4)
 
-    q5 = MyFraction("Hola",3)
+    q5 = MyFraction.from_float("Hola")
     print(q5)    
