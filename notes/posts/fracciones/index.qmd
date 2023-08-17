@@ -276,3 +276,118 @@ En el código anterior definimos los métodos de clase `from_float()` y `from_fr
 :::{.callout-tip}
 Una convención popular en Python es usar el prefijo `from` para los constructores definidos como métodos de clase.
 :::
+
+### Utilizando el decorador `@singledispatchmethod`.
+
+Podemos encontrar la siguiente definición en [PEP 443](https://peps.python.org/pep-0443/):
+
+:::{.callout-tip}
+Una **función genérica** se compone de múltiples funciones que implementan la misma operación para diferentes tipos. La implementación que debe usarse durante una llamada está determinada por el algoritmo de envío (*dispatch algorithm*). Cuando la implementación se elige en función del tipo de un solo argumento, esto se conoce como envío único o **single dispatch**.
+:::
+
+A partir de Python 3.8 podemos utilizar el decorador `@singledispatchmethod` para convertir un método en una función genérica de envío múltiple.
+
+```python
+from functools import singledispatchmethod
+
+class MyFraction:
+
+    @singledispatchmethod
+    def __init__(self, arg1, arg2) -> None:
+        raise TypeError(f"unsupported type of arguments")
+
+    @__init__.register(int)
+    def from_integers(self, p:int, q:int = 1) -> None:
+
+        if not isinstance(q,int):
+          raise TypeError("the denominator should be non-zero")
+
+        if q == 0:
+            raise ZeroDivisionError("the denominator should be non-zero")
+        elif p == 0:
+            self.numerator = p
+            self.denominator = 1
+        else:
+            self.numerator = p
+            self.denominator = q
+            self.simplify()
+
+    @__init__.register(float)
+    def from_float(self, f:float):
+
+        denominator = 1
+        intarg = int(f)
+        while f - intarg > 0.00001:
+            f *= 10
+            denominator *= 10
+            intarg = int(f)
+
+        self.numerator = intarg
+        self.denominator = denominator
+        self.simplify()
+
+    @classmethod
+    def from_fraction(cls, fraction):
+
+        if isinstance(fraction, MyFraction):
+            return cls(fraction.numerator, fraction.denominator)
+        else:
+            raise TypeError("argument should be an instance of MyFraction")
+
+
+    def simplify(self):
+
+        abs_n = abs(self.numerator)
+        abs_d = abs(self.denominator)
+        d = self.gcd(abs_n,abs_d)
+        self.numerator //= d
+        self.denominator //= d
+
+        if self.denominator < 0:
+            self.numerator *= -1
+            self.denominator *= -1
+
+    def __str__(self) -> str:
+        return f"{self.numerator}/{self.denominator}"
+
+    @staticmethod
+    def gcd(a:int, b:int) -> int:
+
+        if a<b:
+            a,b = b,a
+
+        r = a % b
+        while r != 0:
+
+            a = b
+            b = r
+            r = a % b
+
+        return b
+
+
+if __name__ == "__main__":
+
+    q1 = MyFraction(12,8)
+    print(q1)
+
+    q2 = MyFraction(32,-8)
+    print(q2)
+
+    q3 = MyFraction(3.14)
+    print(q3)
+
+    q4 = MyFraction.from_fraction(q2)
+    print(q4)
+```
+
+Salida:
+
+```
+3/2
+-4/1
+157/50
+-4/1
+```
+
+En el código anterior hemos convertido el método `__init__()` en una función genérica que tiene una implementación diferente para enteros (`from_integers()`) y para flotantes (`from_float()`). Sin embargo `from_fraction()` sigue siendo un método de clase debido a que al agregarlo como una implementación más con `__init__.register(MyFraction)`, tenemos un error que nos dice que `MyFraction` no está definida.
