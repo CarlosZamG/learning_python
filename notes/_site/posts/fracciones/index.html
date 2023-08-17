@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Carlos Zamora">
-<meta name="dcterms.date" content="2023-08-06">
+<meta name="dcterms.date" content="2023-08-17">
 
 <title>Aprendiendo Python - Ejemplo: Nuestra propia clase Fraction</title>
 <style>
@@ -167,7 +167,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Fecha de publicación</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">August 6, 2023</p>
+        <p class="date">August 17, 2023</p>
       </div>
     </div>
     
@@ -546,6 +546,19 @@ Tip
 157/50
 -4/1</code></pre>
 <p>En el código anterior hemos convertido el método <code>__init__()</code> en una función genérica que tiene una implementación diferente para enteros (<code>from_integers()</code>) y para flotantes (<code>from_float()</code>). Sin embargo <code>from_fraction()</code> sigue siendo un método de clase debido a que al agregarlo como una implementación más con <code>__init__.register(MyFraction)</code>, tenemos un error que nos dice que <code>MyFraction</code> no está definida.</p>
+</section>
+<section id="qué-aprendimos" class="level3">
+<h3 class="anchored" data-anchor-id="qué-aprendimos">¿Qué aprendimos?</h3>
+<ul>
+<li>A crear diferentes constructores, ya sea con métodos de clase o con funciones genéricas.</li>
+</ul>
+</section>
+<section id="referencias" class="level3">
+<h3 class="anchored" data-anchor-id="referencias">Referencias</h3>
+<ul>
+<li><a href="https://realpython.com/python-multiple-constructors/"><strong><em>Providing Multiple Constructors in Your Python Classes</em></strong></a> por <strong>Leodanis Pozo Ramos</strong> en RealPython.</li>
+<li><a href="https://pywombat.com/articles/tipos-metodos-python"><strong>Tipos de Métodos de clase en Python</strong></a> por <strong>Eduardo Ismael García Pérez</strong> en PyWombat.</li>
+</ul>
 
 
 </section>

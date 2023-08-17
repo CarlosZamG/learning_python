@@ -1,7 +1,7 @@
 ---
 title: "Ejemplo: Nuestra propia clase Fraction"
 author: "Carlos Zamora"
-date: "2023-08-06"
+date: "2023-08-17"
 categories:
     - POO
 ---
@@ -391,3 +391,12 @@ Salida:
 ```
 
 En el código anterior hemos convertido el método `__init__()` en una función genérica que tiene una implementación diferente para enteros (`from_integers()`) y para flotantes (`from_float()`). Sin embargo `from_fraction()` sigue siendo un método de clase debido a que al agregarlo como una implementación más con `__init__.register(MyFraction)`, tenemos un error que nos dice que `MyFraction` no está definida.
+
+### ¿Qué aprendimos?
+
+- A crear diferentes constructores, ya sea con métodos de clase o con funciones genéricas.
+
+### Referencias
+
+- [***Providing Multiple Constructors in Your Python Classes***](https://realpython.com/python-multiple-constructors/) por **Leodanis Pozo Ramos** en RealPython.
+- [**Tipos de Métodos de clase en Python**](https://pywombat.com/articles/tipos-metodos-python) por **Eduardo Ismael García Pérez** en PyWombat.
