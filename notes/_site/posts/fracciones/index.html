@@ -461,7 +461,7 @@ Tip
 <span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> from_integers(<span class="va">self</span>, p:<span class="bu">int</span>, q:<span class="bu">int</span> <span class="op">=</span> <span class="dv">1</span>) <span class="op">-&gt;</span> <span class="va">None</span>:</span>
 <span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="kw">not</span> <span class="bu">isinstance</span>(q,<span class="bu">int</span>):</span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>          <span class="cf">raise</span> <span class="pp">TypeError</span>(<span class="st">"the denominator should be non-zero"</span>)</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>          <span class="cf">raise</span> <span class="pp">TypeError</span>(<span class="st">"the denominator should be an integer"</span>)</span>
 <span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> q <span class="op">==</span> <span class="dv">0</span>:</span>
 <span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>            <span class="cf">raise</span> <span class="pp">ZeroDivisionError</span>(<span class="st">"the denominator should be non-zero"</span>)</span>
