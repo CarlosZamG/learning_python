@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Carlos Zamora">
-<meta name="dcterms.date" content="2023-08-17">
+<meta name="dcterms.date" content="2023-08-18">
 
-<title>Aprendiendo Python - Ejemplo: Nuestra propia clase Fraction</title>
+<title>Aprendiendo Python - Ejemplo: Nuestra propia clase Fraction. Parte 1</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -147,7 +147,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Ejemplo: Nuestra propia clase Fraction</h1>
+      <h1 class="title">Ejemplo: Nuestra propia clase Fraction. Parte 1</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">POO</div>
               </div>
@@ -167,7 +167,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Fecha de publicación</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">August 17, 2023</p>
+        <p class="date">August 18, 2023</p>
       </div>
     </div>
     
@@ -546,6 +546,7 @@ Tip
 157/50
 -4/1</code></pre>
 <p>En el código anterior hemos convertido el método <code>__init__()</code> en una función genérica que tiene una implementación diferente para enteros (<code>from_integers()</code>) y para flotantes (<code>from_float()</code>). Sin embargo <code>from_fraction()</code> sigue siendo un método de clase debido a que al agregarlo como una implementación más con <code>__init__.register(MyFraction)</code>, tenemos un error que nos dice que <code>MyFraction</code> no está definida.</p>
+<p>Eso es todo lo que haremos en este blog, dimos un importante paso al cubrir toda la parte del constructor.</p>
 </section>
 <section id="qué-aprendimos" class="level3">
 <h3 class="anchored" data-anchor-id="qué-aprendimos">¿Qué aprendimos?</h3>
