@@ -1,0 +1,13 @@
+---
+title: "Introducción a la POO. Parte 1: Clases"
+author: "Carlos Zamora"
+date: "2023-08-21"
+categories:
+    - POO
+---
+
+Un paradigma de programación es un conjunto de ideas que nos ayudan a resolver un problema. En esta serie de post documentaré mi aprendizaje del paradigma Orientado a Objetos en Python.
+
+En el mundo real un **objeto** es una cosa tangible que podemos sentir, tocar y manipular. En la **Programación  Orientada a Objetos (POO)** no podemos tocar, ni sentir o manipular los objetos, estos son más bien modelos (abstracciones) de algo que tiene ciertas **características** y podemos hacer algo con ellas. 
+
+Formalmente un objeto es una colección de **datos** y **comportamientos** asociados. Estos comportamientos se representan como funciones que operan sobre los datos, los manipulan, a estas funciones se les llaman **métodos**. Mientras que los datos se representan con variables, conocidas como **variables de instancia** o **atributos**. La idea fundamental del paradigma Orientado a Objetos es juntar estos atributos y métodos en una sola unidad, que es lo que conocemos como objeto. 

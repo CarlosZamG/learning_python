@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/intro-poo-1/index.html",
       "/posts/fracciones-1/index.html",
       "/posts/hola-mundo/index.html"
     ]
