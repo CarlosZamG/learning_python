@@ -10,7 +10,7 @@ class MyFraction:
     def from_integers(self, p:int, q:int = 1) -> None:
 
         if not isinstance(q,int):
-          raise TypeError("the denominator should be an integer")
+            raise TypeError("the denominator should be an integer")
 
         if q == 0:
             raise ZeroDivisionError("the denominator should be non-zero")
